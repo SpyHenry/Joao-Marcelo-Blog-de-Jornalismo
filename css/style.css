@@ -5,23 +5,29 @@
 }
 
 :root {
-    --bg-color: #f5f5f0;
-    --text-color: #1a1a1a;
-    --text-muted: #6b6b6b;
-    --text-light: #7a7a7a;
-    --border-color: #d4d4d4;
-    --primary-color: #c44536;
+    --bg-color: #f7f8fc;
+    --text-color: #171c28;
+    --text-muted: #5f6778;
+    --text-light: #4a566f;
+    --border-color: #e3e8f2;
+    --primary-color: #c7503f;
     --card-bg: #ffffff;
+    --shadow-soft: 0 12px 32px rgba(17, 24, 39, 0.08);
+    --shadow-hover: 0 18px 36px rgba(17, 24, 39, 0.12);
+    --radius-md: 14px;
+    --radius-lg: 20px;
 }
 
 body {
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background: var(--bg-color);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+html { scroll-behavior: smooth; }
 
 img { max-width: 100%; height: auto; }
 
@@ -32,8 +38,12 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 400; 
 /* Header */
 header {
     border-bottom: 1px solid var(--border-color);
-    background: var(--bg-color);
+    background: rgba(247, 248, 252, 0.92);
+    backdrop-filter: blur(12px);
     padding: 2rem 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 header .container { padding: 0 20px; }
@@ -72,6 +82,7 @@ nav {
     display: flex;
     gap: 2rem;
     border-top: 1px solid var(--border-color);
+    align-items: center;
 }
 
 nav a {
@@ -80,7 +91,7 @@ nav a {
     font-size: 0.813rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    transition: color 0.3s;
+    transition: color 0.25s ease, border-color 0.25s ease;
     padding: 1rem 0;
     border-bottom: 2px solid transparent;
     touch-action: manipulation;
@@ -154,11 +165,16 @@ main { padding: 3rem 20px; }
 .featured-card {
     border: 1px solid var(--border-color);
     padding: 2.5rem;
-    transition: box-shadow 0.3s;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
     background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
 }
 
-.featured-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+.featured-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
+}
 
 .featured-card .category {
     display: block;
@@ -208,10 +224,14 @@ main { padding: 3rem 20px; }
 .article-card {
     padding: 2.5rem 0;
     border-bottom: 1px solid var(--border-color);
-    transition: background 0.3s;
+    transition: background 0.25s ease, padding-left 0.25s ease;
+    border-radius: var(--radius-md);
 }
 
-.article-card:hover { background: rgba(0,0,0,0.01); }
+.article-card:hover {
+    background: rgba(255, 255, 255, 0.85);
+    padding-left: 1rem;
+}
 
 .article-meta {
     display: flex;
@@ -245,27 +265,60 @@ main { padding: 3rem 20px; }
 .article-header { margin-bottom: 3rem; }
 
 .back-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--text-muted);
-    text-decoration: none;
-    font-size: 0.875rem;
-    margin-bottom: 2rem;
-    transition: color 0.3s;
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: transparent;
+}
+    
+
+/* Vídeo de entrevista centralizado */
+.video-section {
+    margin: 0 0 3rem;
 }
 
-.back-link:hover { color: var(--text-color); }
+.video-interview {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-interview video {
+    width: 60%;
+    max-width: 720px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+}
+
+.video-caption {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    width: 60%;
+    max-width: 720px;
+    margin-top: 0.5rem;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .video-interview video,
+    .video-caption { width: 100%; }
+}
+.back-link:hover {
+    color: var(--text-color);
+    border-color: #cfd7e8;
+    background: #fdfdff;
+}
 
 .article-header .article-meta { margin-bottom: 1.5rem; }
 
 .article-header h1 {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     line-height: 1.2;
     margin-bottom: 1.5rem;
 }
+
+.article-hero { margin: 1rem 0 1.5rem; }
+.article-hero img { width: 100%; max-width: 900px; display: block; margin: 0 auto; border-radius: 12px; box-shadow: var(--shadow-soft); }
 
 .article-header .excerpt {
     font-size: 1.125rem;
@@ -275,15 +328,18 @@ main { padding: 3rem 20px; }
 }
 
 .article-content {
-    border-top: 1px solid var(--border-color);
-    padding-top: 2.5rem;
+    border: 1px solid var(--border-color);
+    padding: 2.5rem;
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
 }
 
 .article-content p {
     margin-bottom: 1.5rem;
     line-height: 1.8;
     font-size: 1.063rem;
-    text-align: justify;
+    text-align: left;
 }
 
 .article-footer {
@@ -316,6 +372,7 @@ footer {
     margin-top: 4rem;
     padding: 2rem 0;
     text-align: center;
+    background: #ffffff;
 }
 
 footer p { font-size: 0.875rem; color: var(--text-muted); }
@@ -351,7 +408,7 @@ footer p { font-size: 0.875rem; color: var(--text-muted); }
     
     .featured-section { margin-bottom: 3rem; }
     .featured-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-    .featured-card { padding: 2rem; }
+    .featured-card { padding: 2rem; border-radius: var(--radius-md); }
     .featured-card h2 { font-size: 1.25rem; }
     .featured-card p { font-size: 0.875rem; }
     
@@ -366,7 +423,7 @@ footer p { font-size: 0.875rem; color: var(--text-muted); }
     .article-header h1 { font-size: 2rem; }
     .article-header .excerpt,
     .article-content p { font-size: 1rem; }
-    .article-content { padding-top: 2rem; }
+    .article-content { padding: 2rem 1.5rem; }
     .article-content p { margin-bottom: 1.25rem; }
     
     .category-header { margin-bottom: 3rem; }
@@ -414,7 +471,7 @@ footer p { font-size: 0.875rem; color: var(--text-muted); }
     .article-header { margin-bottom: 1.5rem; }
     .article-header h1 { font-size: 1.5rem; margin-bottom: 1rem; }
     .article-header .excerpt { font-size: 0.938rem; }
-    .article-content { padding-top: 1.5rem; }
+    .article-content { padding: 1.5rem 1.1rem; }
     .article-content p { font-size: 0.938rem; line-height: 1.7; margin-bottom: 1rem; }
     .article-footer { margin-top: 2rem; padding-top: 1.5rem; }
     

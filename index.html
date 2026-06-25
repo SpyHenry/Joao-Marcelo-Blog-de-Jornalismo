@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header>
@@ -17,16 +17,14 @@
                 <img src="src/images/JM-logo.png" alt="JM Logo" class="logo-img">
                 <div class="logo-text">
                     <h1>João Marcelo Aguilera</h1>
-                    <p>Jornalismo & Opinião</p>
+                    <p>Jornalismo</p>
                 </div>
             </a>
             <nav>
                 <a href="index.html" class="active">Início</a>
-                <a href="pages/categorias/cinema.html">Cinema</a>
                 <a href="pages/categorias/esporte.html">Esporte</a>
                 <a href="pages/categorias/cultura.html">Cultura</a>
                 <a href="pages/categorias/politica.html">Política</a>
-                <a href="pages/categorias/opiniao.html">Opinião</a>
             </nav>
         </div>
     </header>
@@ -35,10 +33,10 @@
         <!-- Seção Sobre -->
         <section class="about-section">
             <div class="about-content">
-                <h2>Sobre</h2>
-                <p>Estudante de Jornalismo apaixonado por contar histórias que importam. 
-                    Escrevo sobre cinema, cultura, política e os desafios do jornalismo contemporâneo. 
-                    Este espaço é dedicado à reflexão crítica e ao debate de ideias que moldam nosso tempo.</p>
+                <h2>Sobre mim</h2>
+                <p>Sou estudante de Jornalismo na Faculdade Paulus de Comunicação (FAPCOM), com experiência na produção de conteúdos para plataformas digitais, reportagens online e projetos audiovisuais.
+Tenho interesse especial por jornalismo esportivo, cultura do futebol e produção de conteúdo para redes sociais, desenvolvendo textos, entrevistas, roteiros e materiais voltados para o ambiente digital.
+Também participei da produção do documentário sobre a Democracia Corinthiana e produzi conteúdos jornalísticos publicados no portal EntreFocos.</p>
                 <div class="social-links">
                     <a href="https://www.instagram.com/joaomaguilera?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -59,23 +57,34 @@
                 </div>
             </div>
         </section>
+        
+
+    <!-- Vídeo de Entrevista -->
+    <section class="video-section">
+        <figure class="video-interview">
+            <video controls>
+                <source src="src/videos/video entrevista.mp4" type="video/mp4">
+            </video>
+            <figcaption class="video-caption">Trecho do dia em que participei de entrevista com Cléber Machado e PVC, referências do jornalismo esportivo.</figcaption>
+        </figure>
+    </section>
 
         <!-- Artigos em Destaque -->
         <section class="featured-section">
             <div class="featured-grid">
-                <a href="pages/artigos/artigo1.html" class="featured-card">
-                    <span class="category cinema">CINEMA</span>
-                    <span class="date">14 de fevereiro, 2026</span>
-                    <h2>O Renascimento do Cinema Brasileiro nas Telas Internacionais</h2>
-                    <p>Uma análise sobre como o cinema nacional tem conquistado festivais e plateias ao redor do mundo, marcando uma nova era para a sétima arte no Brasil.</p>
-                    <span class="read-time">5 min de leitura</span>
+                <a href="pages/artigos/artigo2.html" class="featured-card">
+                    <span class="category esporte">ESPORTE</span>
+                    <span class="date">31 de maio, 2025</span>
+                    <h2>Luis Enrique pós título do PSG em 2025</h2>
+                    <p>O Paris Saint Germain venceu, pela primeira vez em sua história, a UEFA Champions League</p>
+                    <span class="read-time">3 min de leitura</span>
                 </a>
 
                 <a href="pages/artigos/artigo5.html" class="featured-card">
-                    <span class="category opiniao">OPINIÃO</span>
-                    <span class="date">6 de fevereiro, 2026</span>
-                    <h2>Por que Precisamos Repensar o Jornalismo Digital</h2>
-                    <p>Uma reflexão sobre os desafios e oportunidades do jornalismo na era das redes sociais e da inteligência artificial.</p>
+                    <span class="category esporte">ESPORTE</span>
+                    <span class="date">23 de setembro, 2025</span>
+                    <h2>Ousmane Dembelé é o melhor jogador do mundo.</h2>
+                    <p> O melhor jogador do melhor time do mundo. A Bola de Ouro de 2025 acerta e dá o prêmio à alguém que foi merecedor...</p>
                     <span class="read-time">4 min de leitura</span>
                 </a>
             </div>
@@ -90,14 +99,24 @@
 
         <!-- Artigos Recentes -->
         <section class="articles-section">
-            <a href="pages/artigos/artigo2.html" class="article-card">
+            <a href="pages/artigos/artigo4.html" class="article-card">
                 <div class="article-meta">
-                    <span class="category esporte">ESPORTE</span>
-                    <span class="date">12 de fevereiro, 2026</span>
+                    <span class="category politica">POLÍTICA</span>
+                    <span class="date">24 de abril, 2026</span>
                     <span class="read-time">· 4 min de leitura</span>
                 </div>
-                <h2>A Revolução Tática do Futebol Sul-Americano</h2>
-                <p>Como os clubes brasileiros estão redefinindo o jogo com novas abordagens táticas que desafiam o futebol europeu.</p>
+                <h2>Assassinatos e trabalho análogo à escravidão aumentam em 2025</h2>
+                <p>Relatório da CPT aponta o dobro de mortes de 2024.</p>
+            </a>
+
+            <a href="pages/artigos/artigo1.html" class="article-card">
+                <div class="article-meta">
+                    <span class="category cultura">CULTURA</span>
+                    <span class="date">06 de abril, 2026</span>
+                    <span class="read-time">· 5 min de leitura</span>
+                </div>
+                <h2>Filmes ‘coadjuvantes’ surpreendem e mostram força no início de 2026</h2>
+                <p>Em um ano dominado por franquias, 'Devoradores de Estrelas' prova que o público ainda abraça o que não segue a fórmula.</p>
             </a>
 
             <a href="pages/artigos/artigo3.html" class="article-card">
@@ -108,26 +127,6 @@
                 </div>
                 <h2>Festivais de Música Independente Transformam a Cena Cultural</h2>
                 <p>Novos festivais pelo interior do Brasil estão dando palco a artistas independentes e movimentando a economia criativa local.</p>
-            </a>
-
-            <a href="pages/artigos/artigo4.html" class="article-card">
-                <div class="article-meta">
-                    <span class="category politica">POLÍTICA</span>
-                    <span class="date">8 de fevereiro, 2026</span>
-                    <span class="read-time">· 6 min de leitura</span>
-                </div>
-                <h2>Os Novos Caminhos da Democracia Participativa no Brasil</h2>
-                <p>Iniciativas municipais de participação direta mostram que é possível reinventar a política local com transparência e engajamento.</p>
-            </a>
-
-            <a href="pages/artigos/artigo6.html" class="article-card">
-                <div class="article-meta">
-                    <span class="category cinema">CINEMA</span>
-                    <span class="date">4 de fevereiro, 2026</span>
-                    <span class="read-time">· 5 min de leitura</span>
-                </div>
-                <h2>Documentários que Todo Estudante de Jornalismo Deveria Assistir</h2>
-                <p>Uma seleção curada de filmes documentários essenciais para quem quer entender o poder da narrativa audiovisual.</p>
             </a>
         </section>
     </main>

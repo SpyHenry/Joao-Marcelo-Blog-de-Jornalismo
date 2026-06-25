@@ -6,7 +6,7 @@ Blog pessoal simples em HTML, CSS e JavaScript para armazenar textos de jornalis
 
 - **Design minimalista** inspirado em blogs de jornalismo modernos
 - **Totalmente responsivo** para mobile e desktop
-- **5 seções** organizadas: Cinema, Esporte, Cultura, Política e Opinião
+- **3 seções** organizadas: Esporte, Cultura e Política
 - **Artigos em destaque** na página inicial
 - **Sem dependências** - apenas HTML, CSS e JavaScript puro
 
