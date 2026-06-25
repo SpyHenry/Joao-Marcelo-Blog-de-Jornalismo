@@ -1,5 +1,7 @@
 # Blog João Marcelo Aguilera
 
+Realizei um site para que um amigo consiga armazenar seus textos.
+
 Blog pessoal simples em HTML, CSS e JavaScript para armazenar textos de jornalismo.
 
 ## ✨ Características
